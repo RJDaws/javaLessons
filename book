@@ -1,0 +1,27 @@
+public class Book {
+  String title;
+  String author;
+  int year;
+  boolean borrowed;
+  
+  public Book(String bookTitle, String bookAuthor, int yearPublished, boolean onLoan) {
+    System.out.println("Books are exciting!");
+    title = bookTitle;
+    author = bookAuthor;
+    year = yearPublished;
+    borrowed = onLoan;
+  }
+  
+  public static void main(String[] args) {
+    System.out.println("You have a lot of books!");
+    Book foucault = new Book("\"Discipline & Punish\" ", "Michel Foucault", 1977, true);
+    System.out.println("I repeat ... ");
+    Book muir = new Book("\"Gideon the Ninth\" ", "Tamsyn Muir", 2019, false);
+    boolean isFoucaultOlder = foucault.year < muir.year;
+    System.out.println("Two books recorded: " + foucault.title + "by " + foucault.author + " and " + muir.title + "by " + muir.author + ".");
+    System.out.println("The book " + foucault.title + " is on loan: " + foucault.borrowed);
+    System.out.println("The book " + muir.title + " is on loan: " + muir.borrowed);
+    System.out.println("The statement that " + foucault.title + " is an older than " + muir.title + " is: " + isFoucaultOlder);
+    System.out.println("Thank you for using Aperture Library Systems.");
+  }
+}
